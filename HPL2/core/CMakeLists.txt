@@ -19,7 +19,6 @@ add_definitions(
 file(GLOB common_sources RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     sources/ai/*
     sources/engine/*
-    sources/generate/*
     sources/graphics/*
     sources/gui/*
     sources/haptic/*
@@ -33,7 +32,6 @@ file(GLOB common_sources RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
 
     include/ai/*
     include/engine/*
-    include/generate/*
     include/graphics/*
     include/gui/*
     include/haptic/*
@@ -162,7 +160,6 @@ configure_file(
 # setup source groups
 source_group("AI" REGULAR_EXPRESSION "\\/ai\\/.+")
 source_group("Engine" REGULAR_EXPRESSION "\\/engine\\/.+")
-source_group("Generate" REGULAR_EXPRESSION "\\/generate\\/.+")
 source_group("Graphics" REGULAR_EXPRESSION "\\/graphics\\/.+")
 source_group("GUI" REGULAR_EXPRESSION "\\/gui\\/.+")
 source_group("Input" REGULAR_EXPRESSION "\\/input\\/.+")
