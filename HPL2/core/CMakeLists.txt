@@ -95,7 +95,6 @@ file(GLOB impl_sources RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     sources/impl/MeshLoaderColladaHelpers.cpp
     sources/impl/MeshLoaderColladaLoader.cpp
     sources/impl/MeshLoaderMSH.cpp
-    sources/impl/MeshLoaderFBX.cpp
 )
 
 IF(APPLE)
@@ -174,7 +173,6 @@ source_group("Implementation Specific" REGULAR_EXPRESSION "\\/impl\\/.+")
 source_group("TinyXML" REGULAR_EXPRESSION "\\/impl\\/tiny.+")
 source_group("SDL Specific" REGULAR_EXPRESSION "\\/impl\\/.*SDL.+")
 source_group("OpenGL Specific" REGULAR_EXPRESSION "\\/impl\\/.*GL.+")
-source_group("HaptX Specific" REGULAR_EXPRESSION "\\/impl\\/.+HaptX.+")
 source_group("Newton Specific" REGULAR_EXPRESSION "\\/impl\\/.+Newton.+")
 source_group("Mesh Loaders" REGULAR_EXPRESSION "\\/impl\\/Mesh.+")
 source_group("OpenAL Specific" REGULAR_EXPRESSION "\\/impl\\/.*OpenAL.+")

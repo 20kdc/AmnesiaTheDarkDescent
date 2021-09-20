@@ -25,11 +25,6 @@
 #include <GL/wglew.h>
 #endif
 
-#ifdef WITH_CG
-#include <Cg/cg.h>
-#include <Cg/cgGL.h>
-#endif
-
 #if USE_SDL2
 #include "SDL2/SDL.h"
 #else
@@ -309,9 +304,6 @@ namespace hpl {
 		/////////// IMPLEMENTION SPECIFICS /////////////////
 		/////////////////////////////////////////////////////
 
-#ifdef WITH_CG
-		CGcontext GetGC_Context(){ return mCG_Context;}
-#endif
 		void SetupGL();
 
 	private:
@@ -399,12 +391,6 @@ namespace hpl {
 		//Texture
 		GLenum mvCurrentTextureTarget[kMaxTextureUnits];
 
-#ifdef WITH_CG
-		//////////////////////////////////////
-		//CG Compiler Variables
-		CGcontext mCG_Context;
-#endif
-
 		//////////////////////////////////////
 		//Multisample
 		void CheckMultisampleCaps();
@@ -412,13 +398,6 @@ namespace hpl {
 		//////////////////////////////////////
 		//Double sided stencil
 		bool mbDoubleSidedStencilIsSet;
-
-#ifdef WITH_CG
-		//////////////////////////////////////
-		//CG Helper
-		void InitCG();
-		void ExitCG();
-#endif
 
 		//////////////////////////////////////
 		//Matrix helper

@@ -121,12 +121,6 @@ namespace hpl {
 		mbInitHasBeenRun = false;
 
 		//Init extra stuff
-#ifdef WITH_CG
-		if(mGpuProgramFormat == eGpuProgramFormat_CG)
-		{
-			InitCG();
-		}
-#endif
 
 		//TTF_Init();
 	}
@@ -151,9 +145,6 @@ namespace hpl {
 		for(int i=0;i<kMaxTextureUnits;i++)	hplFree(mpTexCoordArray[i]);
 
 		//Exit extra stuff
-#ifdef WITH_CG
-		ExitCG();
-#endif
 		//TTF_Quit();
 #if SDL_VERSION_ATLEAST(2, 0, 0)
         SDL_DestroyWindow(mpScreen);
@@ -2356,19 +2347,6 @@ namespace hpl {
 
 
 	}
-#ifdef WITH_CG
-	void cLowLevelGraphicsSDL::InitCG()
-	{
-		mCG_Context = cgCreateContext();
-	}
-
-	//-----------------------------------------------------------------------
-
-	void cLowLevelGraphicsSDL::ExitCG()
-	{
-		cgDestroyContext(mCG_Context);
-	}
-#endif
 
 	//-----------------------------------------------------------------------
 

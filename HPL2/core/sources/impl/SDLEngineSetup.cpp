@@ -35,13 +35,8 @@
 #include "impl/LowLevelResourcesSDL.h"
 #include "impl/LowLevelSystemSDL.h"
 #include "impl/LowLevelInputSDL.h"
-#include "impl/LowLevelSoundFmod.h"
 #include "impl/LowLevelSoundOpenAL.h"
 #include "impl/LowLevelPhysicsNewton.h"
-
-#ifdef INCLUDE_HAPTIC
-	#include "impl/LowLevelHapticHaptX.h"
-#endif
 
 #if USE_SDL2
 #include "SDL2/SDL.h"
@@ -135,11 +130,7 @@ namespace hpl {
 
 		//////////////////////////
 		// Haptic
-#ifdef INCLUDE_HAPTIC
-		mpLowLevelHaptic = hplNew( cLowLevelHapticHaptX,() );
-#else
 		mpLowLevelHaptic = NULL;
-#endif
 
 	}
 
@@ -162,9 +153,7 @@ namespace hpl {
 		Log("  Graphics\n");
 		hplDelete(mpLowLevelGraphics);
 		Log("  Haptic\n");
-#ifdef INCLUDE_HAPTIC
-		hplDelete(mpLowLevelHaptic);
-#endif
+		// hplDelete(mpLowLevelHaptic);
 
 #if SDL_VERSION_ATLEAST(2,0,0)
         SDL_EnableScreenSaver();
