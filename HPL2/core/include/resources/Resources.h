@@ -52,14 +52,12 @@ namespace hpl {
 	class cAnimationManager;
 	class cEntFileManager;
 	class cMeshManager;
-	class cVideoManager;
 	class cConfigFile;
 	class cArea2D;
 	class cSound;
 	class cMeshLoaderHandler;
 	class cBitmapLoaderHandler;
 	class cWorldLoaderHandler;
-	class cVideoLoaderHandler;
 	class cScene;
 	class cGraphics;
 	class iRenderable;
@@ -211,7 +209,6 @@ namespace hpl {
 		cMeshLoaderHandler* GetMeshLoaderHandler(){ return mpMeshLoaderHandler;}
 		cBitmapLoaderHandler* GetBitmapLoaderHandler(){ return mpBitmapLoaderHandler;}
 		cWorldLoaderHandler* GetWorldLoaderHandler(){ return mpWorldLoaderHandler;}
-		cVideoLoaderHandler* GetVideoLoaderHandler(){ return mpVideoLoaderHandler;}
 
 		cImageManager* GetImageManager(){return mpImageManager;}
 		cGpuShaderManager* GetGpuShaderManager(){return mpGpuShaderManager;}
@@ -224,7 +221,6 @@ namespace hpl {
 		cMeshManager* GetMeshManager(){ return mpMeshManager;}
 		cSoundEntityManager* GetSoundEntityManager(){ return mpSoundEntityManager;}
 		cAnimationManager* GetAnimationManager(){ return mpAnimationManager;}
-		cVideoManager* GetVideoManager(){ return mpVideoManager;}
 		cEntFileManager* GetEntFileManager(){ return mpEntFileManager; }
 
 		iLowLevelSystem* GetLowLevelSystem(){ return mpLowLevelSystem;}
@@ -252,7 +248,6 @@ namespace hpl {
 		cMaterialManager* mpMaterialManager;
 		cSoundEntityManager* mpSoundEntityManager;
 		cAnimationManager *mpAnimationManager;
-		cVideoManager *mpVideoManager;
 		cEntFileManager *mpEntFileManager;
 
 		cLanguageFile *mpLanguageFile;
@@ -262,7 +257,6 @@ namespace hpl {
 		cMeshLoaderHandler* mpMeshLoaderHandler;
 		cBitmapLoaderHandler* mpBitmapLoaderHandler;
 		cWorldLoaderHandler *mpWorldLoaderHandler;
-		cVideoLoaderHandler *mpVideoLoaderHandler;
 
 		tEntityLoaderMap m_mEntityLoaders;
 		iEntityLoader* mpDefaultEntityLoader;

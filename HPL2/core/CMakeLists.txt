@@ -65,8 +65,6 @@ file(GLOB impl_sources RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     sources/impl/scriptstring_utils.cpp
     # Image loading
     sources/impl/BitmapLoader*
-    # theora video
-    sources/impl/VideoStreamTheora.cpp
     # Newton
     sources/impl/*Newton.cpp
     # GL
@@ -191,7 +189,6 @@ source_group("Platform" REGULAR_EXPRESSION "\\/impl\\/Platform.+")
 
 set(OpenGL_GL_PREFERENCE LEGACY)
 find_package(OpenGL REQUIRED)
-find_package(Theora REQUIRED)
 find_package(Devil REQUIRED)
 find_package(GLEW REQUIRED)
 
@@ -207,7 +204,6 @@ set(HPL2_INCLUDES
     PUBLIC include
     #Important that this is before dependencies so the correct OpenAL headers are used
     PRIVATE ${OALWRAPPER_INCLUDE_DIR}
-    PRIVATE ${THEORA_INCLUDE_DIR}
     PRIVATE ${DEVIL_INCLUDE_DIR}
     PRIVATE ${GLEW_INCLUDE_DIRS}
     PRIVATE ${OPENGL_INCLUDE_DIR}
@@ -231,7 +227,6 @@ target_link_libraries(HPL2
   ${GLEW_LIBRARIES}
   ${OPENGL_gl_LIBRARY}
   ${OPENGL_glu_LIBRARY}
-  ${THEORA_LIBRARY}
   ${DEVIL_LIBRARY}
   z
   ${PLATFORM_LIBS}
