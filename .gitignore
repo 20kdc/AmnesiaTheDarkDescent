@@ -354,3 +354,6 @@ lib/
 
 BuildID_*.cpp
 BuildID_*.h
+ResourcesLocation.h
+
+build
