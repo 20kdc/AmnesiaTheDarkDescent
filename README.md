@@ -1,3 +1,13 @@
+# IF YOU'RE HERE...
+
+If you're here, you PROBABLY want Pollend's fork of the engine instead - see https://github.com/pollend/AmnesiaTheDarkDescent
+
+What you *will* find here:
+
++ attempts at making the HPL2 engine run without Amnesia assets by grafting HPL1 assets into it
++ very bad core shaders designed to make the engine run at any cost
++ very bad core models that don't work properly
+
 # Amnesia: The Dark Descent
 [![CI](https://github.com/shamazmazum/AmnesiaTheDarkDescent/actions/workflows/build.yml/badge.svg)](https://github.com/shamazmazum/AmnesiaTheDarkDescent/actions/workflows/build.yml)
 
